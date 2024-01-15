@@ -78,6 +78,7 @@
 .modal-add-to-cart-btn {
     border: 1px solid var(--green);
     padding: 5px 10px;
+    margin-bottom: 10px;
     cursor: pointer;
     background-color: transparent;
     color: var(--green);
