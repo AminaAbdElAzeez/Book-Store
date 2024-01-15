@@ -1,0 +1,35 @@
+.heading-title {
+    padding: 50px 40px 30px 40px;
+    background-color: var(--white);
+}
+.heading-title > h2 {
+    color: var(--primaryColor);
+    font-size: 30px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+    width: max-content;
+    position: relative;
+}
+.heading-title > h2::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-bottom: 3px solid var(--primaryColor);
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -ms-transition: width 0.5s;
+    -o-transition: width 0.5s;
+}
+.heading-title > h2:hover:after {
+    width: 100%;
+}
+@media only screen and (max-width:520px) {
+    .heading-title {
+        padding: 50px 40px 30px 20px;
+    }
+} 

@@ -1,0 +1,91 @@
+.services {
+    padding: 60px 0px 10px 0px;
+}
+.services-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service-item {
+    width: 23%;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--gray);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.service-item i {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--darkBlue2);
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.service-item:hover i {
+    color: var(--primaryColor);
+    animation: move 0.8s ease-in-out ;
+    -webkit-animation: move 0.8s ease-in-out ;
+}
+@keyframes move {
+    0% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+}
+    50% {
+        transform: translateY(-60px);
+        -webkit-transform: translateY(-60px);
+        -moz-transform: translateY(-60px);
+        -ms-transform: translateY(-60px);
+        -o-transform: translateY(-60px);
+}
+    100% {
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+}
+}
+.service-title {
+    text-transform: capitalize;
+    margin-bottom: 7px;
+    color: var(--darkBlue2);
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.service-item:hover .service-title{
+    color: var(--primaryColor);
+}
+@media only screen and (max-width:992px) {
+    .service-item {
+        width: 47%;
+        margin-bottom: 50px;
+    }
+}
+@media only screen and (max-width:520px) {
+    .service-item {
+        width: 90%;
+    }
+    .service-item i {
+        font-size: 25px;
+    }
+    .service-title {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,172 @@
+.book-slider-container {
+    height: 450px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px;
+    background-color: var(--white);
+    padding: 10px 20px 20px 20px;
+}
+.bi-chevron-left ,
+.bi-chevron-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 30px;
+    color: var(--mainColor);
+    background-color: var(--darkGray);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.bi-chevron-left:hover ,
+.bi-chevron-right:hover {
+    color: var(--yellow);
+}
+.bi-chevron-left {
+    left: 10px;
+}
+.bi-chevron-right {
+    right: 10px;
+}
+.book-slider-wrapper {
+    height: 100%;
+    display: flex;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+.book-slider-item {
+    width: 210px;
+    height: 415px;
+    background-color: var(--black);
+    margin: 0 7px;
+    padding: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.book-slider-item-img{
+    position: relative;
+    width: 100%;
+    height: 340px;
+    margin-bottom: 10px;
+}
+.book-slider-item-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.book-slider-item-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0,1);
+    transition: opacity 0.5s , visibility 0.5s , transform 0.5s;
+    -webkit-transition: opacity 0.5s , visibility 0.5s , transform 0.5s;
+    -moz-transition: opacity 0.5s , visibility 0.5s , transform 0.5s;
+    -ms-transition: opacity 0.5s , visibility 0.5s , transform 0.5s;
+    -o-transition: opacity 0.5s , visibility 0.5s , transform 0.5s;
+    -webkit-transform: scale(0,1);
+    -moz-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    -o-transform: scale(0,1);
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.book-slider-item-img:hover .book-slider-item-layer {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
+}
+.book-slider-item-title {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.book-slider-item-price {
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--primaryColor);
+    margin-bottom: 10px;
+}
+.book-slider-item-stock {
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--pink);
+}
+.book-slider-item-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.book-slider-item-icon {
+    font-size: 27px;
+    width: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: var(--mainColor);
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.book-slider-item-icon:hover {
+    color: var(--yellow);
+}
+.book-slider-item-icon:first-of-type {
+    border-right: 1px solid var(--mainColor);
+}
+@media only screen and (max-width:520px) {
+    .book-slider-container {
+        padding: 10px 20px 20px 10px;
+    }
+    .bi-chevron-left ,
+    .bi-chevron-right {
+        width: 45px;
+        height: 65px;
+        line-height: 65px;
+        font-size: 22px;
+    }
+} 

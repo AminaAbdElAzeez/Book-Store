@@ -1,0 +1,17 @@
+.rating i {
+    font-size: 21px;
+    margin: 0px 2px 10px 0px;
+    display: inline-block;
+    color: var(--yellow);
+
+}
+.rating span {
+    display: block;
+    margin-bottom: 5px;
+}
+.rating span:first-of-type {
+    color: var(--green);
+}
+.rating span:last-of-type {
+    color: var(--crimson);
+}

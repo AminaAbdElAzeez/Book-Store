@@ -1,0 +1,199 @@
+.cart {
+    padding: 140px 0px 60px 0px;
+}
+.top {
+    margin-bottom: 50px;
+}
+.cart-title {
+    color: var(--darkBlue2);
+    text-transform: capitalize;
+    font-size: 28px;
+    margin-bottom: 20px;
+    position: relative;
+    width: max-content;
+}
+.cart-title::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    border-bottom: 3px solid var(--primaryColor);
+    transition: width 0.5s;
+    -webkit-transition: width 0.5s;
+    -moz-transition: width 0.5s;
+    -ms-transition: width 0.5s;
+    -o-transition: width 0.5s;
+}
+.cart-title:hover:after {
+    width: 100%;
+}
+.cart-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cart-items {
+    width: 67%;
+    height: 100%;
+}
+.cart-order-summary {
+    width: 30%;
+    border: 1px solid  var(--gray);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 20px;
+}
+.cart-item img {
+    width: 120px;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+.cart-item-info {
+    width: 55%;
+}
+.cart-item-quantity {
+    width: 110px;
+    margin-top: 12px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cart-item-info-title {
+    color: var(--primaryColor);
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.cart-item-info-title b {
+    color: var(--darkBlue2);
+    font-size: 17px;
+}
+.cart-item-info-qty {
+    cursor: pointer;
+    padding: 5px;
+    font-size: 17px;
+    background-color: var(--darkBlue2);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+} 
+button:disabled {
+    cursor: not-allowed;
+}
+.cart-item-info-qty + b {
+    font-size: 24px;
+    margin: 0px 10px;
+}
+.cart-item-price {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0px;
+    color: var(--red);
+}
+.bi-trash-fill {
+    color: var(--crimson);
+    cursor: pointer;
+    font-size: 25px;
+}
+.cart-order-summary > h5 {
+    font-size: 24px;
+    padding: 15px 10px;
+    text-transform: capitalize;
+    color: var(--darkBlue2);
+}
+.order-summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--gray);
+    padding: 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--black);
+}
+.order-summary-item:last-of-type > b {
+    color: var(--darkBlue2);
+}
+@media only screen and (max-width:1044px) {
+    .cart-wrapper {
+        flex-direction: column;
+    }
+    .cart-items {
+        width: 100%;
+    }
+    .cart-item-info-title {
+        font-size: 16px;
+    }
+    .cart-item-info-title b {
+        font-size: 20px;
+    }
+    .cart-order-summary {
+        width: 280px;
+        margin: 20px auto 0px auto;
+    }
+}
+@media only screen and (max-width:720px) {
+    .cart-title {
+        font-size: 26px;
+    }
+    .cart-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cart-item-info {
+        width: 100%;
+        text-align: center;
+    }
+    .cart-item-quantity {
+        justify-content: center;
+        align-items: center;
+    }
+    .cart-order-summary > h5 {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width:520px) {
+    .cart-title {
+        font-size: 22px;
+    }
+    .cart-item {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .cart-item-info {
+        text-align: left;
+    }
+    .cart-item-quantity {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .cart-order-summary {
+        width: 200px;
+    }
+    .cart-order-summary > h5 {
+        font-size: 20px;
+
+    }
+    .order-summary-item {
+        font-size: 18px;
+    }
+}
